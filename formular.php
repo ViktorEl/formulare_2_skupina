@@ -23,10 +23,6 @@
                 echo "informacie su nedostupne";
             }
         }
-        else {
-            echo "informacie su dostupne";
-        }
-
 
 
 
