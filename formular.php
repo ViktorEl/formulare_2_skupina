@@ -17,11 +17,11 @@
     <?php
         if(isset($_POST["tlacidlo"])) {
             if(isset($_POST["meno"]) && isset($_POST["heslo"])) {
-                echo "Informacie su dostupne";
+                $meno = $_POST["meno"];
+                $heslo = $_POST["heslo"];
+                echo "vase meno je".$meno." a vase heslo je ".$heslo;
             }
-            else {
-                echo "informacie su nedostupne";
-            }
+
         }
 
 
