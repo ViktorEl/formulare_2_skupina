@@ -14,10 +14,17 @@
     </form>
 
 
-
     <?php
         if(isset($_POST["tlacidlo"])) {
-            if(isset($_POST["meno"]) )
+            if(isset($_POST["meno"]) && isset($_POST["heslo"])) {
+                echo "Informacie su dostupne";
+            }
+            else {
+                echo "informacie su nedostupne";
+            }
+        }
+        else {
+            echo "informacie su dostupne";
         }
 
 
