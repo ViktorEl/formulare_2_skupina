@@ -17,9 +17,16 @@
     <?php
         if(isset($_POST["tlacidlo"])) {
             if(isset($_POST["meno"]) && isset($_POST["heslo"])) {
-                $meno = $_POST["meno"];
-                $heslo = $_POST["heslo"];
-                echo "vase meno je".$meno." a vase heslo je ".$heslo;
+                if($_POST["meno"] == "" || $_POST["heslo"] == "") {
+                    die("nevyplnili ste formular");
+                }
+                else {
+                    $meno = $_POST["meno"];
+                    $heslo = $_POST["heslo"];
+                    echo "vase meno je".$meno." a vase heslo je ".$heslo;
+
+                }
+
             }
 
         }
