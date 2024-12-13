@@ -20,10 +20,10 @@
                     $meno = $_POST["meno"];
                     $heslo = $_POST["heslo"];
                     if(ctype_alpha($meno) == false) {
-                        echo "nespravne pouzivatelske meno";
+                        die("nespravne pouzivatelske meno");
                     }
                     if(strlen($heslo) < 3 || strlen($heslo) > 11) {
-                        echo "nespravna dlzka hesla";
+                         die("nespravna dlzka hesla");
                     }
                     echo $meno;
                     echo "<br>";
