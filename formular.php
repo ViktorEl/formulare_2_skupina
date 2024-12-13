@@ -15,20 +15,20 @@
 
 
     <?php
+        $mena = ["Viktor", "Jozo", "Fero"];
+        $hesla = ["Viktor"=>"123", "Jozo"=>"456", "Fero"=>"789"];
         if(isset($_POST["tlacidlo"])) {
             if(isset($_POST["meno"]) && isset($_POST["heslo"])) {
                     $meno = $_POST["meno"];
                     $heslo = $_POST["heslo"];
-                    if(ctype_alpha($meno) == false) {
-                        die("nespravne pouzivatelske meno");
+                    if(!in_array($meno, $mena)) {
+                        die("nie ste registrovany");
                     }
-                    if(strlen($heslo) < 3 || strlen($heslo) > 11) {
-                         die("nespravna dlzka hesla");
+                    if($heslo != $hesla[$meno]) {
+                        die("nespravne heslo");
                     }
-                    echo $meno;
-                    echo "<br>";
-                    echo $heslo;
-                    
+                    echo "ste prihlasený";
+
                 }
         }
 
