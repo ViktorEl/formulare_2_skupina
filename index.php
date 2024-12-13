@@ -19,6 +19,5 @@
         <input type="submit" name="tlacidlo" value="Odoslať">
     </form>
 
-
 </body>
 </html>
