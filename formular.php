@@ -7,11 +7,7 @@
 </head>
 <body>
 
-    <form action="formular.php" name="registracia" method="post">
-        <input type="text" name="meno" placeholder="Zadajte meno" required> <br>
-        <input type="password" name="heslo" placeholder="Zadajte heslo" required> <br>
-        <input type="submit" name="tlacidlo" value="Odoslať"> <br>
-    </form>
+
 
 
     <?php
