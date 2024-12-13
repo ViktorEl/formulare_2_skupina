@@ -19,16 +19,18 @@
             if(isset($_POST["meno"]) && isset($_POST["heslo"])) {
                     $meno = $_POST["meno"];
                     $heslo = $_POST["heslo"];
-                    echo "vase meno je ".$meno." vase heslo je ".$heslo;
-
+                    if(ctype_alpha($meno) == false) {
+                        echo "nespravne pouzivatelske meno";
+                    }
+                    if(strlen($heslo) < 3 || strlen($heslo) > 11) {
+                        echo "nespravna dlzka hesla";
+                    }
+                    echo $meno;
+                    echo "<br>";
+                    echo $heslo;
+                    
                 }
-
-
-
         }
-
-
-
 
     ?>
 
