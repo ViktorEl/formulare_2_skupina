@@ -5,31 +5,32 @@
 <body>
 
     <?php
-
         if(isset($_POST["tlacidlo"])) {
-            if(isset($_POST["pohlavie"])) {
-                $pohlavie = $_POST["pohlavie"];
-                if($pohlavie == "muz") {
-                    echo "ste muž";
+            if(isset($_POST["kurz"])) {
+                $pole = $_POST["kurz"];
+                $dlzkaPola = count($pole); // zistime dlzku pola
+                if($dlzkaPola != 2) {
+                    die("musite vybrat presne 2 kurzy");
                 }
-                elseif($pohlavie == "zena") {
-                    echo "ste žena";
+   
+                foreach($pole as $prvok) {
+                    if($prvok == "1") {
+                        echo "vybrali ste si PHP";
+                        echo "<br>";
+                    }
+                    elseif($prvok == "2") {
+                        echo "vybrali ste si Python";
+                        echo "<br>";
+                    }
+                    elseif($prvok == "3") {
+                        echo "vybrali ste si Javu";
+                    }
                 }
-                elseif($pohlavie == "ine") {
-                    echo "nechcem uviesť";
-                }
-                else {
-                    echo "nevybrali ste nič";
-                }
-             
+            } else {
+                die("musite vybrat presne 2 kurzy");
             }
         }
-
-
-
-
-
-
+  
     ?>
 
     
